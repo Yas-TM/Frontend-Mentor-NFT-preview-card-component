@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --clr-soft-blue:hsl(215, 51%, 70%);
+    --clr-cyan:hsl(178, 100%, 50%);
+    --clr-main-blue:hsl(217, 54%, 11%);
+    --clr-card-blue:hsl(216, 50%, 16%);
+    --clr-line-blue:hsl(215, 32%, 27%);
+    --clr-white:hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font: 18px 'Outfit', sans-serif;;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-main-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nft-box{
+    width: 300px;
+    padding: 20px;
+    background-color: var(--clr-card-blue);
+    border-radius: 20px;
+}
+
+.nft-img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.nft-img-container{
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    height: calc(100% - 5px);
+    width: 100%;
+    opacity: 0;
+    border-radius: 10px;
+    transition: all .4s;
+    background-color: var(--clr-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nft-img-container:hover .overlay{
+    opacity: 1;
+    background-color: hsla(178, 100%, 50%, 0.507)
+}
+
+.title{
+    color: var(--clr-white);
+    font-size: 1.2rem;
+    margin: 20px 0;
+    transition: color .4s;
+}
+
+.description{
+    color: var(--clr-soft-blue);
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--clr-line-blue);
+    padding: 20px 0;
+}
+
+.value-info, .time-info{
+    display: flex;
+    align-items: center;
+}
+
+.value-info{
+    color: var(--clr-cyan);
+}
+
+.time-info span{
+    color: var(--clr-soft-blue);
+}
+
+object{
+    margin-right: 5px;
+}
+
+.publisher-info{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    color: var(--clr-soft-blue);
+    font-size: .8rem;
+}
+
+.publisher-name{
+    color: var(--clr-white);
+    transition: color .4s;
+}
+
+.publisher-info img{
+    width: 30px;
+    border: 1px solid var(--clr-white);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.title:hover, .publisher-name:hover{
+    color: var(--clr-cyan);
+}
